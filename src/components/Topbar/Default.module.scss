@@ -1,0 +1,19 @@
+.topbar {
+  background-image: var(--primary-gradient);
+  padding: 0.5rem 1rem;
+
+  &Inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &Logo {
+    width: 2.5rem;
+
+    img {
+      width: 100%;
+      margin-right: 0.5rem;
+    }
+  }
+}
