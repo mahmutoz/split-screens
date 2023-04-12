@@ -1,12 +1,13 @@
-import Topbar from "@/components/Topbar/Default.jsx";
-import Footer from "@/components/Footer/Default.jsx";
+import React from "react";
+import Topbar from "@/components/shared/Topbar/Default.jsx";
+import Footer from "@/components/shared/Footer/Default.jsx";
 
-function MainLayout({ children }) {
+function MainLayout({children}) {
   return (
     <div className="wrapper">
-      <Topbar />
+      <Topbar/>
       <main className="flex-full">{children}</main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

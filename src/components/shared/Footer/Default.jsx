@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Default.module.scss";
 
 function Default() {
