@@ -5,8 +5,8 @@ import styles from "./Default.module.scss";
 function Default() {
   return (
     <header className={styles.topbar}>
-      <div className={styles.topbarInner}>
-        <a href="/" className={styles.topbarLogo} role="link">
+      <div className={styles.topbar__inner}>
+        <a href="/" className={styles.topbar__logo}>
           <img src={Logo} alt="Logo"/>
         </a>
         <div className="topbar__nav">{/*<Nav />*/}</div>

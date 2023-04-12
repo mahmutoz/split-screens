@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--bg-warning);
+    border: 2px solid var(--border-secondary-color);
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    min-width: 200px;
+    width: fit-content;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    margin-bottom: 0.3rem;
+  }
+
+  &__text {
+    min-height: 1rem;
+    display: flex;
+    column-gap: 0.5rem;
+  }
+}

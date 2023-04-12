@@ -5,13 +5,13 @@
   align-items: center;
   height: 3.5rem;
 
-  &Inner {
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &Logo {
+  &__logo {
     width: 2.5rem;
 
     img {

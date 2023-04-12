@@ -1,6 +1,6 @@
 import React from "react";
-import Topbar from "@/components/shared/Topbar/Default.jsx";
-import Footer from "@/components/shared/Footer/Default.jsx";
+import Topbar from "@/components/shared/topbar/Default.jsx";
+import Footer from "@/components/shared/footer/Default.jsx";
 
 function MainLayout({children}) {
   return (
