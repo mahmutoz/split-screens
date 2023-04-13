@@ -21,6 +21,15 @@ function Toolbar() {
     dispatch(setTableHead([...newTableHead]));
   }
 
+  const uniqueContracts = tableData.filter((item, index, self) =>
+    self.findIndex(t => t.contract === item.contract) === index
+  ).map(item => {
+    return {
+      id: item.id,
+      contract: item.contract
+    }
+  });
+
   return (
     <div className={styles.toolbar}>
       <form>
@@ -28,7 +37,7 @@ function Toolbar() {
           <select onChange={(event) => handleSelect(event)}>
             <option value="">Kontrat Seçiniz</option>
             {
-              tableData.map((item) => (
+              uniqueContracts.map((item) => (
                 <option key={item.id} value={item.contract}>{item.contract}</option>
               ))
             }

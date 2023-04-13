@@ -19,6 +19,18 @@ export const TABLE_DATA = [
   },
   {
     id: 4,
+    contract: 2018,
+    offer: 2345,
+    status: "Satış"
+  },
+  {
+    id: 5,
+    contract: 2018,
+    offer: 4547,
+    status: "Satış"
+  },
+  {
+    id: 6,
     contract: 2019,
     offer: 2345,
     status: "Satış"
