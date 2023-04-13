@@ -1,9 +1,14 @@
 import React from "react";
+import Table from "@/components/app/panels/panel3/Table";
+import Form from "@/components/app/panels/panel3/Form.jsx";
 
-function Panel3() {
+function Panel4() {
   return (
-    <div>Panel3</div>
+    <div className="d-flex flex-column">
+      <Table/>
+      <Form/>
+    </div>
   );
 }
 
-export default Panel3;
+export default Panel4;

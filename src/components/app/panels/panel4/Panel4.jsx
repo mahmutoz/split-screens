@@ -1,9 +1,9 @@
 import React from "react";
 
-function Panel4() {
+function Panel3() {
   return (
-    <p>**Lorem ipsum**</p>
+    <div>Panel3</div>
   );
 }
 
-export default Panel4;
+export default Panel3;
