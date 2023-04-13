@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
+import {setFormData} from "@/stores/reducers/formData.js";
 
 function Form() {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ function Form() {
 
   const addData = (e) => {
     e.preventDefault();
+    dispatch(setFormData(form))
   }
 
   const changeHandle = (e) => {
@@ -23,7 +25,6 @@ function Form() {
 
   return (
     <div>
-      {JSON.stringify(form)}
       {
         isFormActive ? (
           <form onSubmit={addData}>

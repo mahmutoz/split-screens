@@ -1,0 +1,55 @@
+.toolbar {
+  padding: .3rem;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: .3rem;
+  }
+
+  &__btn {
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    padding: .3rem .5rem;
+
+    &:hover {
+      & .menu {
+        display: flex;
+      }
+    }
+  }
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 28px;
+  flex-direction: column;
+  text-align: left;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border: 1px solid var(--gray-700);
+  background-color: var(--gray-100);
+  cursor: default;
+
+  li {
+    display: flex;
+
+    input {
+      margin-right: 0.3rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.3rem;
+    }
+  }
+}

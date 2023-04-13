@@ -2,7 +2,7 @@ import React from "react";
 import Table from "@/components/app/panels/panel3/Table";
 import Form from "@/components/app/panels/panel3/Form.jsx";
 
-function Panel4() {
+function Panel3() {
   return (
     <div className="d-flex flex-column">
       <Table/>
@@ -11,4 +11,4 @@ function Panel4() {
   );
 }
 
-export default Panel4;
+export default Panel3;

@@ -4,7 +4,7 @@ import Table from "@/components/app/panels/panel1/Table.jsx";
 
 function Panel1() {
   return (
-    <div className="d-flex flex-column">
+    <div className="d-flex flex-column overflow-auto">
       <Toolbar/>
       <Table/>
     </div>

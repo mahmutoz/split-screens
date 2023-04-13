@@ -33,7 +33,7 @@ function Toolbar() {
   return (
     <div className={styles.toolbar}>
       <form>
-        <div className="d-flex justify-between">
+        <div className={styles.toolbar__inner}>
           <select onChange={(event) => handleSelect(event)}>
             <option value="">Kontrat Seçiniz</option>
             {
@@ -42,32 +42,30 @@ function Toolbar() {
               ))
             }
           </select>
-          <div className={styles.actions}>
-            <button type="button" className="btn btn--primary">
+          <div className={styles.toolbar__actions}>
+            <button type="button" className={styles.toolbar__btn}>
               <img src={UploadIcon} width={16} height={16} alt="upload"/>
             </button>
-            <button type="button" className="btn btn--primary">
+            <button type="button" className={styles.toolbar__btn}>
               <img src={SettingsIcon} width={16} height={16} alt="settings"/>
-              <div className={styles.menu}>
-                <ul>
-                  {
-                    tableHead.map((item) => (
-                      <li key={item.id}>
-                        <input
-                          onChange={(event) => handleCheckBox(event, item)}
-                          name={"checked"}
-                          id={item.id}
-                          type="checkbox"
-                          defaultChecked={item.checked}
-                        />
-                        <label htmlFor={item.id}>{item.title}</label>
-                      </li>
-                    ))
-                  }
-                </ul>
-              </div>
+              <ul className={styles.menu}>
+                {
+                  tableHead.map((item) => (
+                    <li key={item.id}>
+                      <input
+                        onChange={(event) => handleCheckBox(event, item)}
+                        name={"checked"}
+                        id={item.id}
+                        type="checkbox"
+                        defaultChecked={item.checked}
+                      />
+                      <label htmlFor={item.id}>{item.title}</label>
+                    </li>
+                  ))
+                }
+              </ul>
             </button>
-            <button type="button" className="btn btn--primary">
+            <button type="button" className={styles.toolbar__btn}>
               <img src={PlusIcon} width={16} height={16} alt="plus"/>
             </button>
           </div>

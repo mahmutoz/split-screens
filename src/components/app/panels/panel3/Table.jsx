@@ -7,16 +7,21 @@ function Table() {
 
     <table>
       <tbody>
-      <tr>
-        {
-          formData.map(item =>
-
+      {
+        formData.map((item, index) =>
+          <tr key={index}>
             <td>
               {item.contract}
             </td>
-          )
-        }
-      </tr>
+            <td>
+              {item.offer}
+            </td>
+            <td>
+              {item.status}
+            </td>
+          </tr>
+        )
+      }
       </tbody>
     </table>
 

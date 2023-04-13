@@ -14,14 +14,11 @@ const tableSlice = createSlice({
     setTableHead: (state, action) => {
       state.tableHead = action.payload;
     },
-    setTableData: (state, action) => {
-      state.tableData = action.payload;
-    },
     setSelectedContract: (state, action) => {
       state.selectedContract = action.payload;
     }
   }
 });
 
-export const {setTableHead, setTableData, setSelectedContract} = tableSlice.actions;
+export const {setTableHead, setSelectedContract} = tableSlice.actions;
 export default tableSlice.reducer;

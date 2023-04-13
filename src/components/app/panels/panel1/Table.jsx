@@ -4,9 +4,12 @@ import {useSelector} from "react-redux";
 
 function Table() {
   const {tableHead, tableData, selectedContract} = useSelector((state) => state.tableReducer);
+
+  const isAllChecked = tableHead.some((item) => item.checked);
+
   return (
     <table className={styles.table}>
-      <thead className={styles.table__head}>
+      <thead>
       <tr>
         {
           tableHead.map((item) => (
@@ -15,18 +18,24 @@ function Table() {
         }
       </tr>
       </thead>
-      <tbody className={styles.table__body}>
+      <tbody>
       {
-        tableData.map((item) => (
-          item.contract === selectedContract || selectedContract === 0 ?
+
+        isAllChecked ?
+          tableData.map((item) => (
+
+            (item.contract === selectedContract || selectedContract === 0) &&
             <tr key={item.id}>
               {
                 Object.entries(tableHead).map(([key, value]) => (
-                  value.checked && <td key={key}>{item[value.type]}</td>
+                  value.checked ? <td key={key}>{item[value.type]}</td> : ""
                 ))
               }
-            </tr> : ""
-        ))
+            </tr>
+          )) :
+          <tr>
+            <td colSpan={tableHead.length} className="text-center">Lütfen tablo başlıklarını seçiniz.</td>
+          </tr>
       }
       </tbody>
     </table>
