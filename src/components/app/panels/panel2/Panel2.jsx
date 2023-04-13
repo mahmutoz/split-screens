@@ -1,7 +1,6 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import styles from "./Panel2.module.scss"
-import screenSizeReducer from "@/stores/reducers/screenSize.js";
 
 function PanelCardItem({subtitle, value}) {
   const formattedValue = (value) => {

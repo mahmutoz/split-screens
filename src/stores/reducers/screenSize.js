@@ -1,9 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-  horizontalScreen: [0, 0],
-  topVerticalScreen: [0, 0],
-  bottomVerticalScreen: [0, 0],
+  horizontalScreen: [50, 50],
+  topVerticalScreen: [50, 50],
+  bottomVerticalScreen: [50, 50],
 }
 
 const screenSizeSlice = createSlice({
@@ -27,20 +27,6 @@ const screenSizeSlice = createSlice({
     },
   }
 });
-
-// // Save data to localStorage
-// export const screenSizeMiddleware = store => next => action => {
-//   console.log("store.getState()", store.getState())
-//   const {screenSizeSlice} = store.getState();
-//   localStorage.setItem('screenSize', JSON.stringify({...screenSizeSlice}));
-//   return next(action);
-// };
-//
-// // Load data from localStorage
-// export const loadScreenSize = () => {
-//   const data = localStorage.getItem('screenSize');
-//   return data ? JSON.parse(data) : null;
-// };
 
 export const {setScreenSize} = screenSizeSlice.actions;
 export default screenSizeSlice.reducer;
