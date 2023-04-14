@@ -4,7 +4,7 @@ import styles from "./Panel2.module.scss"
 
 function PanelCardItem({subtitle, value}) {
   const formattedValue = (value) => {
-    if (!value) {
+    if (value === 50) {
       return "";
     }
     return `%${value.toFixed(8)}`;

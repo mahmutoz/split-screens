@@ -1,11 +1,11 @@
 import React from 'react';
 import {useSelector} from "react-redux";
+import style from "@/components/app/panels/panel1/Table.module.scss";
 
 function Table() {
   const {formData} = useSelector((state) => state.formDataReducer);
   return (
-
-    <table>
+    <table className={style.table}>
       <tbody>
       {
         formData.map((item, index) =>

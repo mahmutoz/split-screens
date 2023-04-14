@@ -4,7 +4,7 @@ import Form from "@/components/app/panels/panel3/Form.jsx";
 
 function Panel3() {
   return (
-    <div className="d-flex flex-column">
+    <div className="d-flex flex-column overflow-auto">
       <Table/>
       <Form/>
     </div>

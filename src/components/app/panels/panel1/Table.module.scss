@@ -6,12 +6,12 @@
   min-width: 500px;
 
   th, td {
-    border-bottom: 1px solid rgba(var(--secondary-rgb), .5);
+    border-bottom: 1px solid rgba(var(--secondary-rgb), .6);
     padding: 0.3rem;
   }
 
   th {
-    background-color: rgba(var(--secondary-rgb), .5);
+    background-color: rgba(var(--secondary-rgb), .6);
     text-align: left;
   }
 }
