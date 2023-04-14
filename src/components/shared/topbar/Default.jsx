@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "@/assets/img/logos/logo-white.svg";
 import styles from "./Default.module.scss";
+import Nav from "@/components/shared/navigation/Default";
 
 function Default() {
   return (
@@ -9,7 +10,9 @@ function Default() {
         <a href="/" className={styles.topbar__logo}>
           <img src={Logo} alt="Logo"/>
         </a>
-        <div className="topbar__nav">{/*<Nav />*/}</div>
+        <div className="topbar__nav">
+          <Nav/>
+        </div>
       </div>
     </header>
   );

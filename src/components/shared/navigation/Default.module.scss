@@ -1,0 +1,38 @@
+.nav {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: var(--white);
+
+    button {
+      background-color: transparent;
+      border: 0;
+      margin-right: 0.5rem;
+      padding: .3rem;
+    }
+  }
+
+  &__green {
+    background-color: var(--success) !important;
+  }
+
+  &__fullname {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    border: 1px solid var(--white);
+  }
+}

@@ -3,8 +3,9 @@ import {useSelector} from "react-redux";
 import styles from "./Panel2.module.scss"
 
 function PanelCardItem({subtitle, value}) {
+  const {isSaved} = useSelector((state) => state.screenSizeReducer);
   const formattedValue = (value) => {
-    if (value === 50) {
+    if (!isSaved) {
       return "";
     }
     return `%${value.toFixed(8)}`;
@@ -25,7 +26,11 @@ function PanelCardItem({subtitle, value}) {
 }
 
 function Panel2() {
-  const {horizontalScreen, topVerticalScreen, bottomVerticalScreen} = useSelector((state) => state.screenSizeReducer);
+  const {
+    horizontalScreen,
+    topVerticalScreen,
+    bottomVerticalScreen
+  } = useSelector((state) => state.screenSizeReducer);
 
   return (
     <div className={styles.card}>
