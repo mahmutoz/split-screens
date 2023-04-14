@@ -4,7 +4,12 @@ const initialState = {
   horizontalScreen: [50, 50],
   topVerticalScreen: [50, 50],
   bottomVerticalScreen: [50, 50],
-  isSaved: false
+  isSaved: false,
+  changedFields: {
+    horizontalScreen: false,
+    topVerticalScreen: false,
+    bottomVerticalScreen: false
+  }
 }
 
 const screenSizeSlice = createSlice({
@@ -13,6 +18,7 @@ const screenSizeSlice = createSlice({
   reducers: {
     setScreenSize: (state, action) => {
       state.isSaved = true;
+      state.changedFields[action.payload.type] = true;
       switch (action.payload.type) {
         case 'horizontalScreen':
           state.horizontalScreen = action.payload.value;
@@ -26,7 +32,7 @@ const screenSizeSlice = createSlice({
         default:
           break;
       }
-    },
+    }
   }
 });
 

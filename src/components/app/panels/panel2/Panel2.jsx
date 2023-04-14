@@ -2,10 +2,11 @@ import React from "react";
 import {useSelector} from "react-redux";
 import styles from "./Panel2.module.scss"
 
-function PanelCardItem({subtitle, value}) {
-  const {isSaved} = useSelector((state) => state.screenSizeReducer);
+function PanelCardItem({subtitle, value, type}) {
+  const {isSaved, changedFields} = useSelector((state) => state.screenSizeReducer);
+
   const formattedValue = (value) => {
-    if (!isSaved) {
+    if (!(isSaved && changedFields[type])) {
       return "";
     }
     return `%${value.toFixed(8)}`;
@@ -36,9 +37,21 @@ function Panel2() {
     <div className={styles.card}>
       <div className={styles.card__inner}>
         <h6 className={styles.card__title}>Ayarlar</h6>
-        <PanelCardItem subtitle="Yatay Pencere Değerleri:" value={horizontalScreen}/>
-        <PanelCardItem subtitle="Üst Dikey Pencere Değerleri:" value={topVerticalScreen}/>
-        <PanelCardItem subtitle="Alt Dikey Pencere Değerleri:" value={bottomVerticalScreen}/>
+        <PanelCardItem
+          subtitle="Yatay Pencere Değerleri:"
+          value={horizontalScreen}
+          type="horizontalScreen"
+        />
+        <PanelCardItem
+          subtitle="Üst Dikey Pencere Değerleri:"
+          value={topVerticalScreen}
+          type="topVerticalScreen"
+        />
+        <PanelCardItem
+          subtitle="Alt Dikey Pencere Değerleri:"
+          value={bottomVerticalScreen}
+          type="bottomVerticalScreen"
+        />
       </div>
     </div>
   );
