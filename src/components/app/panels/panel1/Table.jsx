@@ -1,5 +1,5 @@
-import styles from "@/components/app/panels/panel1/Table.module.scss";
 import React from "react";
+import styles from "@/components/app/panels/panel1/Table.module.scss";
 import {useSelector} from "react-redux";
 
 function Table() {

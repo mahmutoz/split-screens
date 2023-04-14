@@ -4,9 +4,8 @@
   --primary-rgb: 17, 25, 74;
   --secondary: #c8c8c8;
   --secondary-rgb: 200, 200, 200;
-  --warning: #e0e1c1;
-  --warning-rgb: 224, 225, 193;
   --success: #249d46;
+  --warning: #e0e1c1;
   --gray-100: #f8f9fa;
   --gray-200: #e9ecef;
   --gray-300: #dee2e6;
@@ -26,7 +25,6 @@
   --bg-secondary: var(--secondary);
   --bg-secondary-rgb: var(--secondary-rgb);
   --bg-warning: var(--warning);
-  --bg-warning-rgb: var(--warning-rgb);
 
   /* Borders */
   --border-primary-color: var(--gray-300);

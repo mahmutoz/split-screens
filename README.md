@@ -3,10 +3,13 @@
 This is a simple project to split the screen in four parts. The left-top part is a list of the data table, the
 right-top part is a show split location information, the left-bottom is a form to add new data, and the right-bottom is
 empty. :)
+---
 
 ## Demo
 
 [https://split-screens.vercel.app/](https://split-screens.vercel.app/)
+
+---
 
 ## How to use
 
@@ -16,6 +19,8 @@ empty. :)
 4. Open your browser and go to `http://localhost:5173/`
 5. Enjoy it!
 
+---
+
 ## Dependencies
 
 - [React](https://reactjs.org/): A JavaScript library for building user interfaces
@@ -23,12 +28,16 @@ empty. :)
 - [React-Split](https://split.js.org/): A tiny library for creating beautiful split views
 - [Redux-Persist](https://github.com/rt2zz/redux-persist#readme): Persist and rehydrate a redux store
 
+---
+
 ## Development Dependencies
 
 - [Saas](https://sass-lang.com/): A CSS preprocessor
 - [Vite](https://vitejs.dev/): A build tool that aims to provide a faster and leaner development experience for modern
   web projects
 - [Prettier](https://prettier.io/): An opinionated code formatter
+
+---
 
 ## Directory Structure
 
